@@ -1,0 +1,40 @@
+# Robot Framework Configuration
+# Usage: robot --argumentfile robot.yaml tests/
+
+# Output directory
+--outputdir reports
+
+# Log level
+--loglevel INFO
+
+# Listeners for Allure reporting
+--listener allure_robotframework
+
+# Include variable files
+--variablefile resources/variables/env_config.yaml
+
+# Custom Python path
+--pythonpath .
+--pythonpath libraries
+
+# Default browser
+--variable BROWSER:chrome
+
+# Headless mode (override with --variable HEADLESS:false)
+--variable HEADLESS:true
+
+# Implicit wait
+--variable IMPLICIT_WAIT:10
+
+# Screenshot on failure
+--variable SCREENSHOT_ON_FAILURE:true
+
+# Base URL
+--variable BASE_URL:https://www.saucedemo.com
+
+# Timeout settings
+--variable TIMEOUT:30s
+--variable SELENIUM_TIMEOUT:10s
+
+# Tags to exclude (if any)
+# --exclude wip

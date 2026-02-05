@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Robot Framework outputs
+reports/
+output/
+log.html
+report.html
+output.xml
+selenium-screenshot-*.png
+pabot_results/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Test artifacts
+screenshots/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Environment variables
+.env
+.env.local
+*.env
+
+# Secrets
+secrets/
+*.pem
+*.key
