@@ -1,0 +1,99 @@
+# Test Data for SauceDemo Tests
+
+# User Credentials
+users:
+  standard:
+    username: standard_user
+    password: secret_sauce
+    description: Normal user with full access
+  
+  locked:
+    username: locked_out_user
+    password: secret_sauce
+    description: User that is locked out
+  
+  problem:
+    username: problem_user
+    password: secret_sauce
+    description: User that encounters UI issues
+  
+  performance:
+    username: performance_glitch_user
+    password: secret_sauce
+    description: User that experiences slow performance
+  
+  error:
+    username: error_user
+    password: secret_sauce
+    description: User that triggers errors
+  
+  visual:
+    username: visual_user
+    password: secret_sauce
+    description: User for visual testing
+
+# Products
+products:
+  backpack:
+    name: Sauce Labs Backpack
+    price: "$29.99"
+    id: sauce-labs-backpack
+  
+  bike_light:
+    name: Sauce Labs Bike Light
+    price: "$9.99"
+    id: sauce-labs-bike-light
+  
+  bolt_tshirt:
+    name: Sauce Labs Bolt T-Shirt
+    price: "$15.99"
+    id: sauce-labs-bolt-t-shirt
+  
+  fleece_jacket:
+    name: Sauce Labs Fleece Jacket
+    price: "$49.99"
+    id: sauce-labs-fleece-jacket
+  
+  onesie:
+    name: Sauce Labs Onesie
+    price: "$7.99"
+    id: sauce-labs-onesie
+  
+  red_tshirt:
+    name: "Test.allTheThings() T-Shirt (Red)"
+    price: "$15.99"
+    id: "test.allthethings()-t-shirt-(red)"
+
+# Checkout Test Data
+checkout:
+  valid_customer:
+    first_name: John
+    last_name: Doe
+    postal_code: "12345"
+  
+  empty_fields:
+    first_name: ""
+    last_name: ""
+    postal_code: ""
+
+# Expected Error Messages
+error_messages:
+  locked_out: "Sorry, this user has been locked out"
+  invalid_credentials: "Username and password do not match any user in this service"
+  username_required: "Username is required"
+  password_required: "Password is required"
+  first_name_required: "First Name is required"
+  last_name_required: "Last Name is required"
+  postal_code_required: "Postal Code is required"
+
+# Success Messages
+success_messages:
+  order_complete_header: "Thank you for your order!"
+  order_complete_text: "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+
+# Sort Options
+sort_options:
+  name_asc: az
+  name_desc: za
+  price_low_high: lohi
+  price_high_low: hilo

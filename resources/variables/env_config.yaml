@@ -1,0 +1,25 @@
+# Environment Configuration Variables
+# Used by Robot Framework tests
+
+# Base URL Configuration
+BASE_URL: https://www.saucedemo.com
+
+# Browser Configuration
+BROWSER: chrome
+HEADLESS: true
+
+# Timeout Settings (in seconds)
+IMPLICIT_WAIT: 10
+SELENIUM_TIMEOUT: 10
+PAGE_LOAD_TIMEOUT: 30
+
+# Screenshot Settings
+SCREENSHOT_ON_FAILURE: true
+SCREENSHOT_DIRECTORY: reports/screenshots
+
+# Retry Configuration
+MAX_RETRIES: 3
+RETRY_DELAY: 1
+
+# Logging
+LOG_LEVEL: INFO

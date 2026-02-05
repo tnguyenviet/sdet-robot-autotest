@@ -1,0 +1,108 @@
+# SauceDemo Element Locators
+# Centralized locator definitions for maintainability
+
+login_page:
+  username_input:
+    primary: "id=user-name"
+    fallback:
+      - "css=#user-name"
+      - "xpath=//input[@placeholder='Username']"
+
+  password_input:
+    primary: "id=password"
+    fallback:
+      - "css=#password"
+      - "xpath=//input[@placeholder='Password']"
+
+  login_button:
+    primary: "id=login-button"
+    fallback:
+      - "css=[data-test='login-button']"
+      - "xpath=//input[@value='Login']"
+
+  error_message:
+    primary: "css=[data-test='error']"
+    fallback:
+      - "css=.error-message-container"
+      - "xpath=//h3[@data-test='error']"
+
+inventory_page:
+  page_title:
+    primary: "css=.title"
+
+  product_list:
+    primary: "css=.inventory_list"
+
+  product_item:
+    primary: "css=.inventory_item"
+
+  product_name:
+    primary: "css=.inventory_item_name"
+
+  product_price:
+    primary: "css=.inventory_item_price"
+
+  add_to_cart_button:
+    template: "id=add-to-cart-{product_id}"
+
+  remove_button:
+    template: "id=remove-{product_id}"
+
+  cart_badge:
+    primary: "css=.shopping_cart_badge"
+
+  cart_link:
+    primary: "css=.shopping_cart_link"
+
+  sort_dropdown:
+    primary: "css=.product_sort_container"
+
+  menu_button:
+    primary: "id=react-burger-menu-btn"
+
+  logout_link:
+    primary: "id=logout_sidebar_link"
+
+cart_page:
+  cart_list:
+    primary: "css=.cart_list"
+
+  cart_item:
+    primary: "css=.cart_item"
+
+  checkout_button:
+    primary: "id=checkout"
+
+  continue_shopping_button:
+    primary: "id=continue-shopping"
+
+  remove_button:
+    template: "id=remove-{product_id}"
+
+checkout_page:
+  first_name_input:
+    primary: "id=first-name"
+
+  last_name_input:
+    primary: "id=last-name"
+
+  postal_code_input:
+    primary: "id=postal-code"
+
+  continue_button:
+    primary: "id=continue"
+
+  cancel_button:
+    primary: "id=cancel"
+
+  finish_button:
+    primary: "id=finish"
+
+  back_home_button:
+    primary: "id=back-to-products"
+
+  complete_header:
+    primary: "css=.complete-header"
+
+  summary_total:
+    primary: "css=.summary_total_label"
