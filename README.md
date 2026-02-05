@@ -70,8 +70,66 @@ robot --variable HEADLESS:true --outputdir reports --pythonpath . --pythonpath l
 
 ### NLP Test Generator
 
+Generate Robot Framework test cases from natural language descriptions using AI (OpenAI GPT-4) or template-based matching.
+
+**Key Features:**
+- AI-powered or template-based generation (works without API key)
+- Auto-generates test names, tags, and proper Robot Framework syntax
+- Integrates with existing keywords and test data
+- CLI and Robot Framework library usage
+
+#### Quick Start
+
 ```bash
+# CLI usage - generates and prints test case
 python -m libraries.ai.nlp_generator "User logs in with valid credentials"
+
+# Optional: Enable AI mode with OpenAI API key
+export OPENAI_API_KEY="your-api-key-here"
+```
+
+#### Usage Examples
+
+**Command Line:**
+```bash
+python -m libraries.ai.nlp_generator "User cannot login with wrong password"
+python -m libraries.ai.nlp_generator "Locked user sees error message"
+```
+
+**Robot Framework Library:**
+```robot
+*** Settings ***
+Library    libraries.ai.NLPTestGenerator
+
+*** Test Cases ***
+Generate And Save Test
+    ${filepath}=    Generate And Save Test
+    ...    User cannot login with invalid credentials
+    ...    filename=invalid_login_test
+```
+
+**Python API:**
+```python
+from libraries.ai.nlp_generator import NLPTestGenerator
+
+generator = NLPTestGenerator()
+test = generator.generate_test_from_description("User logs in successfully")
+filepath = generator.save_generated_test(test, "login_test")
+```
+
+#### Example Output
+
+Input: `"User logs in with valid credentials"`
+
+```robot
+User Logs In With Valid Credentials
+    [Documentation]    User logs in with valid credentials
+    [Tags]    smoke
+    Open Browser    ${BASE_URL}    ${BROWSER}
+    Verify Login Page Is Displayed
+    Login With Credentials    standard_user    secret_sauce
+    Wait Until Page Contains Element    css=.inventory_list
+    [Teardown]    Close Browser
 ```
 
 ## Reports
